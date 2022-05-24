@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script type="text/javascript" src="./js/d3.v7.min.js"></script>
+        <script type="text/javascript" src="./js/marked.min.js"></script>
+    </head>
+    <body class="mainBody">
+        <h1>Welcome</h1>
+        <h2>Want to see what you have got?</h2>
+        <div>
+            <p>Here it is.</p>
+            <input
+                type="range"
+                id="limitRange"
+                name="limitRange"
+                min="10"
+                value="10"
+                max="20"
+                step="1"
+                onchange="refresh1()"
+            />
+            <label id="limitRangeLabel">10</label>
+            <button onclick="refresh1()">Refresh</button>
+        </div>
+        <div id="historyDiv"></div>
+        <h2>Do you like it?</h2>
+        <script type="text/javascript" src="./js/history.js"></script>
+        <script type="text/javascript">
+            console.log(d3.version);
+            refresh1();
+        </script>
+    </body>
+</html>
